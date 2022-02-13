@@ -1,0 +1,286 @@
+/* --------> common */
+body {
+    font-family: "Segoe UI", Verdana, "游ゴシック", YuGothic, 
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #000;
+    line-height: 1;
+    font-size: 14px;
+}
+
+a, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.heading {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fee;
+}
+
+header .header-logo > h1:first-child,
+.heading h2 {
+    font-family: "Times New Roman", "游明朝", "Yu Mincho",
+    "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", 
+    "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.heading h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+@font-face {
+    font-family: '白舟髭隷';
+    src: url("./hkhigerei/hkhigerei.ttf") format("truetype"); 
+} 
+/* <-------- common */
+
+/* --------> header */
+header {
+    background-color: rgb(20, 19, 19);
+}
+
+header .header-logo {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+header .header-logo > h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #fff;
+    line-height: 90px;
+    font-family: '白舟髭隷';
+}
+
+header .header-logo > h1:first-child {
+    margin-right: 10px;
+    font-size: 35px
+}
+
+header .header-logo > h1:last-child {
+    width: 100px;
+}
+
+/* <-------- header */
+
+/* --------> main */
+#voice-area {
+    background-image: url(./image/night.webp);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+  }
+  
+#voice-area .store-image {
+    margin-right: -150px;
+    padding-left: 70px;
+  }
+  
+  #voice-area .store-image img {
+    width: 230px;
+    height: 230px;
+    border: solid 10px #fff;
+}
+  
+  #voice-area .chatting {
+    display: inline-block;
+    position: relative;
+    margin-left: 260px;
+    border-radius: 50px;
+    background: rgb(255 254 217);
+  }
+  
+  #voice-area .chatting:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 55px;
+    left: -38px;
+    border: 17px solid transparent;
+    border-right: 30px solid rgb(255 254 217);
+  }
+  
+  #voice-area .chatting p {
+    width: 300px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+/* <-------- main */
+#saler-info .information {
+    height: 110px;
+}
+
+#saler-info .basic-saler-info {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#saler-info .user-name:first-child {
+    border-right:solid 1px #a9a5a5;
+}
+
+#saler-info .user-name,
+#saler-info .store-name {
+display: flex;
+width: 375px;justify-content: center;
+padding-top: 40px;
+
+}
+
+#saler-info .basic-saler-info p {
+    height: 60px;
+    margin: 0;
+}
+
+#saler-info .user-name p:first-child:after,
+#saler-info .store-name p:first-child::after {
+    content: " :　";
+}
+
+#item-area .card-space {
+ padding:20px 200px 40px 200px;
+}
+
+#item-area .card-group {
+    padding: 20px 10px 0 15px;
+    }
+
+#item-area .card {
+    border: solid 1px #a9a5a5;
+    overflow: hidden;
+}
+
+#item-area .card-parts:hover img {
+    transform: scale(1.1);
+}
+
+#item-area .card-parts > img {
+    height: 230px;
+    width: 230px;
+    transform: scale(1);
+    transition-duration: 0.5s;
+}
+
+#item-area .card-content {
+    text-align: center;
+    padding: 15px;
+}
+
+#item-area .card-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+ }
+
+ #item-area .card-text {
+     font-size: 14px;
+     padding-top: 10px;
+ }
+
+ #item-area .card-btn {
+    text-align: center;
+    padding-bottom: 15px;
+ }
+
+ #item-area .card-btn > a {
+    padding: 0 15px;
+    border-radius: 0;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    line-height: 25px;
+    transition-duration: 0.2s;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+ }
+
+ #item-area .card-btn > a:hover {
+    background-color: #442602;
+    color: #fff;
+ }
+
+ #item-area .card-btn > a:focus {
+    box-shadow: 0 0 0 1px #442602;
+}
+
+#video-area .link-area {
+    background-color: #fee;
+    position: relative;
+    height: 250px;
+}
+
+ #video-area .saler {
+    position: absolute;
+    left: 350px;
+    top: 15px;
+ }
+
+ #video-area .saler > img {
+    width: 200px;
+    height: 100%;
+    border-radius: 100px;
+    border: solid 10px #442602;
+ }
+
+ #video-area .link-url {
+    position: absolute;
+    left: 700px;
+    top: 75px;
+ }
+
+ #video-area .link-url > p {
+    font-size: 20px;
+    font-weight: 500;
+ }
+
+ #video-area .link-url > a {
+    font-size: 18px;
+ }
+
+ #video-area .link-url > a:hover {
+     text-decoration: underline;
+ }
+ /* <-------- main */
+
+/* --------> footer */
+footer .close-btn {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .close-btn a {
+    font-size: 18px;
+    border: solid 2px #292929;
+    padding: 10px 30px;
+}
+
+footer .close-btn a:hover {
+    border-color: #693d07fa;
+    transition-duration: 0.2s;
+}
+
+footer .footer-area {
+    background-color: rgb(20, 19, 19);
+    height: 60px;
+}
+/* <-------- footer */

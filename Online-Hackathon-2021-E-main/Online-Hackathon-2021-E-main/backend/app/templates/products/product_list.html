@@ -1,0 +1,116 @@
+{% load static %}
+
+<html lang="ja">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>詳細画面</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-logo">
+                <h1>バーチャル</h1>
+                <h1>夏祭り</h1>
+            </div>
+        </header>
+        <main>
+            <section id="voice-area">
+                <div class="store-image">
+                    <img src="{{shop_data.user.image_url}}">
+                </div>
+                <div class="chatting">
+                    <p>いらっしゃい</p>
+                </div>
+            </section>
+            <section id="saler-info">
+                <div class="heading">
+                    <h2>出品者情報</h2>
+                </div>
+                <div class="information">
+                    <div class=basic-saler-info>
+                        <div class="user-name">
+                            <p>名前</p>
+                            <p>{{shop_data.user.username}}</p>
+                        </div>
+                        <div class="store-name">
+                            <p>屋台</p>
+                            <p>{{shop_data.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="item-area">
+                <div class="heading">
+                    <h2>商品</h2>
+                </div>
+                <div class="card-space container">
+                    <div class="row">
+                        {% for product in product_data %}
+                        <div class="col-4 card-group">
+                            <div class="card card-parts">
+                                <img src="{{product.image_url}}">
+                                <div class="card-body card-content">
+                                    <h5 class="card-title">{{product.name}}</h5>
+                                    <br><br>
+                                    <p class="card-text">{{product.content}}</p>
+                                    <p class="card-text">{{product.price}}円</p>
+                                </div>
+                                <div class="card-btn m-0">
+                                    <a href="#" class="btn">購入</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div> 
+            </section>
+            <section id="video-area">
+                <div class="heading">
+                    <h2>出品者に会う</h2>
+                </div>
+                <div class="link-area">
+                    <div class="saler">
+                        <img src="{{shop_data.user.image_url}}">
+                    </div>
+                    <div class="link-url">
+                        <p>リンク</p>
+                        <a href="#">https://～～～～～～～</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="close-btn"><a href="#">画面を閉じる</a></div>
+            <div class="footer-area"></div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <script>
+            uttearnce = new SpeechSynthesisUtterance();
+            uttearnce.text = 'いらっしゃい';
+            uttearnce.volume = 1;
+            uttearnce.rate = 1;
+            uttearnce.pitch = 1;
+            uttearnce.lang = 'ja-JP'
+            window.speechSynthesis.speak(uttearnce);
+        </script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    </body>
+
+</html>

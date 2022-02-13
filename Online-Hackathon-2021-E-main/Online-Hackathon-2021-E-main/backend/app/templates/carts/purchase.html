@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div>
+    <p>リクエストユーザー: {{cart_content.user}}</p>
+    <p>購入した商品の名前: {{cart_content.purchase_product}}</p>
+    <a href="{{request.META.HTTP_REFERER}}">一覧へ戻る</a>
+</div>
+{% endblock %}

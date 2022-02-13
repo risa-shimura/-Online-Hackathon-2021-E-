@@ -1,0 +1,370 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+}
+
+.stores {
+  display: flex;
+  align-items: flex-end;
+  width: 7200px;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.road-wrapper {
+  margin: -100px auto 0;
+  padding: 100px 0 0;
+  width: 100%;
+  height: 350px;
+  background: rgb(68, 63, 53);
+  background: linear-gradient(
+    0deg,
+    rgba(68, 63, 53, 1) 0%,
+    rgba(102, 77, 30, 1) 0%,
+    rgba(212, 172, 125, 1) 100%
+  );
+  z-index: -1;
+}
+
+.road {
+  position: relative;
+}
+
+.character {
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.character img {
+  object-fit: fill;
+  height: 200px;
+  width: auto;
+  display: block;
+}
+
+.user-name {
+  background-color: rgba(256, 256, 256, 0.5);
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* モーダル */
+
+#mask {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+}
+
+#modal {
+  background-color: #fff;
+  width: 800px;
+  padding: 40px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 201;
+  margin: 0 auto;
+  transition: 0.5s;
+  text-align: center;
+}
+
+#modal > p {
+  line-height: 2;
+  margin: 0 0 20px;
+}
+
+#open,
+#close {
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 16px auto 0;
+}
+
+/* 屋台 */
+
+.store-wrapper {
+  width: 400px;
+}
+
+.store {
+  width: 405px;
+  margin-right: -5px;
+  position: relative;
+  border-right: gainsboro solid 5px;
+}
+
+.store-name {
+  text-align: center;
+  font-size: 40px;
+  line-height: 50px;
+  height: 50px;
+}
+
+.store-name span {
+  background-color: white;
+  padding: 0 10px;
+}
+
+.store-img-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 110px;
+}
+
+.store-img-wrapper img {
+  display: block;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  height: 90px;
+  padding: 10px 20px;
+  display: flex;
+}
+
+.store::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: -50px;
+  border-right: solid transparent 50px;
+}
+
+.store-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 50px 100px;
+  padding: 20px;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 0.4s;
+}
+
+.store-detail .seller-img {
+  margin-bottom: 10px;
+  border: 2px black solid;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.store-detail .seller-name {
+  margin-bottom: 10px;
+}
+
+.store-detail .detail-btn {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.store-detail .detail-btn:hover {
+  transform: scale(1.1);
+  background-color: saddlebrown;
+}
+
+.bonodori-wrapper {
+  width: 400px;
+  margin: 0 200px;
+}
+
+.bonodori {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* store個別 */
+
+.store1,
+.store10 {
+  z-index: 9;
+}
+
+.store2,
+.store11 {
+  z-index: 8;
+}
+
+.store3,
+.store12 {
+  z-index: 7;
+}
+
+.store4,
+.store13 {
+  z-index: 6;
+}
+
+.store5,
+.store14 {
+  z-index: 5;
+}
+
+.store6,
+.store15 {
+  z-index: 4;
+}
+
+.store7,
+.store16 {
+  z-index: 3;
+}
+
+/* color */
+
+.store1,
+.store8 {
+  border-left: gainsboro solid 5px;
+}
+
+.store1::before,
+.store8::before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  border-top: #000b1a 25px solid;
+  border-right: transparent 25px solid;
+  border-bottom: transparent 25px solid;
+  border-left: #000b1a 25px solid;
+  z-index: 10;
+}
+
+.store1::after {
+  border-top: hsl(0, 75%, 34%) solid 50px;
+}
+.store1 .store-name {
+  background-color: hsl(0, 75%, 50%);
+  font-family: "Dela Gothic One", cursive;
+}
+.store1 .text {
+  background-color: hsl(0, 75%, 80%);
+}
+
+.store2 .store-name {
+  background-color: hsl(180, 75%, 50%);
+  font-family: "DotGothic16", sans-serif;
+}
+.store2 .text {
+  background-color: hsl(180, 75%, 80%);
+}
+.store2::after {
+  border-top: hsl(180, 75%, 34%) solid 50px;
+  border-right: solid transparent 50px;
+}
+
+.store3 .store-name {
+  background-color: hsl(100, 75%, 50%);
+  font-family: "Hachi Maru Pop", cursive;
+}
+.store3 .text {
+  background-color: hsl(100, 75%, 80%);
+}
+.store3::after {
+  border-top: hsl(100, 75%, 34%) solid 50px;
+  border-right: solid transparent 50px;
+}
+
+.store4 .store-name {
+  background-color: hsl(300, 75%, 50%);
+  font-family: "Rampart One", cursive;
+}
+.store4 .text {
+  background-color: hsl(300, 75%, 80%);
+}
+.store4::after {
+  border-top: hsl(300, 75%, 34%) solid 50px;
+  border-right: solid transparent 50px;
+}
+
+.store5 .store-name {
+  background-color: hsl(50, 75%, 50%);
+  font-family: "RocknRoll One", sans-serif;
+}
+.store5 .text {
+  background-color: hsl(50, 75%, 80%);
+}
+.store5::after {
+  border-top: hsl(50, 75%, 34%) solid 50px;
+  border-right: solid transparent 50px;
+}
+
+.store6 .store-name {
+  background-color: hsl(70, 75%, 50%);
+  font-family: "Stick", sans-serif;
+}
+.store6 .text {
+  background-color: hsl(70, 75%, 80%);
+}
+.store6::after {
+  border-top: hsl(70, 75%, 34%) solid 50px;
+  border-right: solid transparent 50px;
+}
+
+.store7 .store-name {
+  background-color: hsl(150, 75%, 50%);
+  font-family: "Kaisei Decol", serif;
+}
+.store7 .text {
+  background-color: hsl(150, 75%, 80%);
+}
+.store7::after {
+  border-top: hsl(150, 75%, 34%) solid 50px;
+  border-right: solid transparent 50px;
+}
+
+/* ↓後ろ足 */
+.store7::before,
+.store14::before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  right: -50px;
+  height: 100%;
+  border-right: gainsboro solid 5px;
+}
+
+/* 表示用 */
+.disabled,
+.disabledY {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}

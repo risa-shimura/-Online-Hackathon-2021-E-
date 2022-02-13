@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=DotGothic16&family=Hachi+Maru+Pop&family=Kaisei+Decol&family=Rampart+One&family=RocknRoll+One&family=Stick&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/ress.css" />
+    <link rel="stylesheet" href="../css/list-frontend.css" />
+    <link rel="stylesheet" href="../css/stars.css" />
+  </head>
+  <body>
+    <!-- 以下星空 -->
+    <div class="stars-container">
+      <div class="stars s">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="stars m">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="stars l">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <!-- 以下モーダル -->
+    <div id="mask"></div>
+    <section id="modal">
+      <h1>virtual夏祭りへようこそ！！！</h1>
+      <p>
+        バーチャル夏祭りでは、全国各地の出店者による屋台で買い物やゲームがお楽しみいただけます。<br />
+        キーボードのWASDキー、もしくは矢印キーでキャラクターを操作できます。<br />
+        屋台の近くに行くと「みてみる」ボタンが出現し、それを押すと屋台の商品を見たり、<br />
+        ゲームをプレイすることができます。<br />
+        お楽しみください！
+      </p>
+      <div id="close">閉じる</div>
+    </section>
+    <!-- 以下お祭り会場 -->
+    <section class="container">
+      <div class="stores">
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail1">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store1">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail2">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store2">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail3">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store3">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail4">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store4">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail5">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store5">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail6">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store6">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail7">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store7">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+
+        <div class="bonodori-wrapper">
+          <img class="bonodori" src="../img/bonodori.png" alt="" />
+        </div>
+
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail8">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store1">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail9">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store2">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail10">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store3">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail11">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store4">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail12">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store5">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail13">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store6">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+        <div class="store-wrapper">
+          <div class="store-detail disabled disabledY" id="detail14">
+            <img class="seller-img" src="../img/ganko_oyaji.png" alt="" />
+            <div class="seller-name">屋台　太郎</div>
+            <a class="detail-btn" href="#">みてみる</a>
+          </div>
+          <div class="store store7">
+            <div class="store-name"><span>屋台名</span></div>
+            <div class="store-img-wrapper">
+              <img src="../img/banana.jfif" alt="" />
+            </div>
+            <div class="text">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="road-wrapper">
+        <div class="road">
+          <div class="character" id="user1">
+            <p class="user-name" id="user1-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user2">
+            <p class="user-name" id="user2-name"></p>
+            <img src="../img/ganko_oyaji.png" alt="" />
+          </div>
+          <div class="character" id="user3">
+            <p class="user-name" id="user3-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user4">
+            <p class="user-name" id="user4-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user5">
+            <p class="user-name" id="user5-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user6">
+            <p class="user-name" id="user6-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user7">
+            <p class="user-name" id="user7-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user8">
+            <p class="user-name" id="user8-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user9">
+            <p class="user-name" id="user9-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+          <div class="character" id="user10">
+            <p class="user-name" id="user10-name"></p>
+            <img src="../img/yukata_woman.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/list-frontend.js"></script>
+  </body>
+</html>
